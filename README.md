@@ -1,5 +1,5 @@
  <p align="center">
-  <img src="docs/media/banner.webp" alt="Eaglercraft Archives" width="100%">
+  <img src="https://imgur.com/vWeqryp" alt="EaglerCraft Archives" width="100%">
 </p>
 
 <p align="center">
