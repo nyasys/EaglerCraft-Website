@@ -1,5 +1,5 @@
- <p align="center">
-  <img src="https://imgur.com/vWeqryp" alt="EaglerCraft Archives" width="100%">
+<p align="center">
+  <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives" width="100%">
 </p>
 
 <p align="center">
