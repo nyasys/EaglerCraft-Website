@@ -27,7 +27,6 @@
   <a href="WEBSITE-HERE"><b>Website</b></a> ·
   <a href="HISTORY-HERE"><b>History</b></a> ·
   <a href="CREDITS-HERE"><b>Contributing</b></a> ·
-  <a href="COMMUNITY-HERE"><b>Roadmap</b></a>
 </p>
 
 <p align="center">
@@ -50,7 +49,7 @@
 </p>
 
 <p align="center">
-  <b>Explore the archive:</b> Classic Client Versions · Community Releases <a href="ROADMAP.md">See the roadmap</a>
+  <b>Explore The Archive:</b> Classic Client Versions · Community Releases <a href="HISTORY">See The History Behind EaglerCraft</a>
 </p>
 
 <p align="center">
@@ -73,6 +72,6 @@ SOON
 
 <p align="center">
   <a href="CREDITS"><b>Contributing</b></a> ·
-  <a href="HISTORY"><b>Roadmap</b></a> ·
+  <a href="HISTORY"><b>HISTORY</b></a> ·
   <a href="LICENSE"><b>License</b></a>
 </p>
