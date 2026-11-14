@@ -1,0 +1,15 @@
+node_modules
+dist
+.output
+.vinxi
+pnpm-lock.yaml
+package-lock.json
+bun.lock
+routeTree.gen.ts
+GAMES/
+public/javascripts/libs/
+public/javascripts/main.js
+public/javascripts/pocket.js
+public/javascripts/plugins.js
+src/components/ui/
+src/lib/mc2013-body.ts

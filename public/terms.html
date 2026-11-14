@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>EaglerCraft Terms of Use</title>
+    <meta
+      name="description"
+      content="Terms of use for EaglerCraft and its original project contributions."
+    />
+    <meta name="author" content="EaglerCraft contributors" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="stylesheets/style.css?b=b_675" />
+    <link rel="stylesheet" media="handheld" href="stylesheets/handheld.css?b=b_675" />
+    <script src="javascripts/libs/modernizr.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div id="header_container" class="clearfix">
+          <a id="logo" href="/">EaglerCraft</a>
+          <ul id="menu">
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="/game/index.html">Game</a>
+              <ul>
+                <li><a href="/game/index.html">What Is EaglerCraft?</a></li>
+                <li><a href="/game/howtoplay.html">Getting Started</a></li>
+                <li><a href="/community.html">Credits</a></li>
+              </ul>
+            </li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+          <div id="userbox">
+            <span class="logged-out"><a href="/login.html">Log In</a></span>
+          </div>
+        </div>
+      </header>
+
+      <noscript>
+        <div id="javascript-warning" class="warning warning-yellow">
+          Please, enable Java-Script to use this site!
+        </div>
+      </noscript>
+
+      <div id="main" role="main" class="clearfix controller-Site action-terms">
+        <section class="left">
+          <h1>Terms Of Use</h1>
+          <h2>Permission for original contributions</h2>
+          <p>
+            You are free to use, copy, modify, combine, publish, distribute, sublicense, and sell
+            original code and other materials created specifically for this project. You may do so
+            for any purpose, including commercial purposes, provided that you retain applicable
+            copyright and license notices.
+          </p>
+          <p>
+            This permission applies only to material the project contributors are entitled to
+            license. It does not grant rights to Minecraft or other third-party code, game content,
+            graphics, audio, names, logos, trademarks, or other materials. Those remain subject to
+            their respective owners' rights and license terms. No affiliation with or endorsement by
+            Mojang or Microsoft is implied.
+          </p>
+          <h2>Third-party materials</h2>
+          <p>
+            This project may include or refer to third-party materials and software. Check the
+            applicable notices and licenses before using those materials; this page does not replace
+            or expand them. “Open source and free to use” refers only to original project
+            contributions as described above.
+          </p>
+          <h2>Disclaimer</h2>
+          <p>
+            Original project contributions are provided “as is,” without warranties or conditions of
+            any kind, express or implied, to the extent permitted by law. Contributors are not
+            liable for claims or damages arising from their use, to the extent permitted by law.
+          </p>
+        </section>
+        <section class="right"></section>
+      </div>
+    </div>
+
+    <footer>
+      EaglerCraft &copy; 2020-2026. Original project contributions are open source and free to use;
+      third-party materials remain under their owners' terms. &mdash;
+      <a href="terms.html">Terms of Use</a>
+    </footer>
+
+    <script src="javascripts/libs/json2.js"></script>
+    <script src="/javascripts/libs/jquery-4.0.0.min.js"></script>
+    <script src="/javascripts/libs/jquery-migrate-4.0.2.min.js"></script>
+    <script src="/javascripts/libs/jquery-legacy-compat.js"></script>
+    <script src="javascripts/libs/jquery.dataTables.min.js"></script>
+    <script src="javascripts/libs/jquery.timeago.js"></script>
+    <script src="javascripts/libs/sammy.js"></script>
+    <script type="text/javascript">
+      var app = $.sammy("#main", function () {
+        this.debug = true;
+
+        this.get("/", function () {
+          var action = function (options) {
+            var pattern = "/";
+            for (var key in options) {
+              pattern = pattern.replace(":" + key, options[key] || "");
+            }
+            return pattern;
+          };
+          this.partial(action());
+        });
+
+        this.get("/game", function () {
+          var action = function (options) {
+            var pattern = "/game";
+            for (var key in options) {
+              pattern = pattern.replace(":" + key, options[key] || "");
+            }
+            return pattern;
+          };
+          this.partial(action());
+        });
+
+        this.get("/login", function () {
+          var action = function (options) {
+            var pattern = "/login";
+            for (var key in options) {
+              pattern = pattern.replace(":" + key, options[key] || "");
+            }
+            return pattern;
+          };
+          this.partial(action());
+        });
+
+        this.get("/register", function () {
+          var action = function (options) {
+            var pattern = "/register";
+            for (var key in options) {
+              pattern = pattern.replace(":" + key, options[key] || "");
+            }
+            return pattern;
+          };
+          this.partial(action());
+        });
+      });
+
+      $(document).ready(function () {
+        if ($("html").is(".history") && false) {
+          app.run(window.location.pathname);
+        } else {
+          $(document).trigger("changed");
+        }
+      });
+    </script>
+    <script src="javascripts/plugins.js?b=b_675"></script>
+    <script src="javascripts/main.js?b=b_675"></script>
+  </body>
+</html>

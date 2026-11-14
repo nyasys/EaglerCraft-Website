@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EaglerCraft</title>
+    <meta
+      name="description"
+      content="Explore EaglerCraft, learn how to play, and find project information."
+    />
+    <meta name="author" content="EaglerCraft-Team" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="stylesheets/style.css?b=b_694" />
+    <link rel="stylesheet" media="handheld" href="stylesheets/handheld.css?b=b_672" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div id="header_container" class="clearfix">
+          <a id="logo" href="/">EaglerCraft</a>
+          <ul id="menu">
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="/game/index.html">Game</a>
+              <ul>
+                <li><a href="/game/index.html">What Is EaglerCraft?</a></li>
+                <li><a href="/game/howtoplay.html">Getting Started</a></li>
+                <li><a href="/community.html">Credits</a></li>
+              </ul>
+            </li>
+            <li><a href="/community.html">Community</a></li>
+            <li><a href="/profile.html">Profile</a></li>
+          </ul>
+          <div id="userbox">
+            <span class="logged-out"><a href="/login.html">Log In</a></span>
+          </div>
+        </div>
+      </header>
+
+      <div id="main" role="main" class="clearfix controller-Site action-index">
+        <section class="left">
+          <h1>Play EaglerCraft</h1>
+          <p>Build, explore, and play with friends right in your browser.</p>
+          <div class="homepage-video">
+            <iframe
+              src="https://www.youtube.com/embed/YAhXcqnHuEg"
+              title="EaglerCraft video"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+        <aside id="animals">
+          <p><a href="#game-picker" class="buy-now" id="play-now">Play Now!</a></p>
+          <p><a href="/game/howtoplay.html" class="how-to-play-link">How To Play?</a></p>
+        </aside>
+        <div style="clear: both; height: 0"></div>
+        <section class="left three_col social" id="facebook">
+          <h2><a href="/community.html">Community</a></h2>
+          <p>Find community links, forums, and places to share what you build.</p>
+          <p><a href="/community.html">Visit the community</a></p>
+        </section>
+        <section class="mid three_col social minecon-banner">
+          <h2><a href="/game/index.html">About EaglerCraft</a></h2>
+          <p>Learn about the project, its history, and the people who contributed to it.</p>
+          <p><a href="/game/index.html">Learn more</a></p>
+        </section>
+        <section class="right three_col social" id="twitter">
+          <h2><a href="/community.html">Credits</a></h2>
+          <p>See the people and technologies that helped make the project.</p>
+          <p><a href="/community.html">View credits</a></p>
+        </section>
+      </div>
+    </div>
+
+    <dialog id="game-picker" aria-labelledby="game-picker-title">
+      <div class="game-picker-header">
+        <h2 id="game-picker-title">Choose A Game &amp; Client</h2>
+      </div>
+      <button class="game-picker-close" type="button" aria-label="Close game picker">
+        &times;
+      </button>
+      <label class="game-picker-search-label" for="game-picker-search"
+        >Search For ANY Client!</label
+      >
+      <input id="game-picker-search" type="search" placeholder="Type Here" autocomplete="off" />
+      <p id="game-picker-status" aria-live="polite">Loading games and clients...</p>
+      <ul id="game-picker-list" aria-label="Games and clients"></ul>
+      <p id="game-picker-empty" hidden>No Matching Clients!</p>
+    </dialog>
+
+    <footer>
+      EaglerCraft &copy; 2020-2026. Original project contributions are open source and free to use;
+      third-party materials remain under their owners' terms. &mdash;
+      <a href="/terms.html">Terms of Use</a>
+    </footer>
+    <script src="/javascripts/game-picker.js" defer></script>
+  </body>
+</html>
