@@ -63,6 +63,38 @@ describe("game file routing", () => {
     expect(fetchMock).toHaveBeenCalledTimes(3);
   });
 
+  it("finds Git LFS pointers when the upstream omits Content-Length", async () => {
+    const pointer =
+      "version https://git-lfs.github.com/spec/v1\noid sha256:85dbbc0a467830ee599cc731aad6c2fe671a27cb6e3dec97bad84c7d720c46c3\nsize 100391663\n";
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(new Response(pointer))
+      .mockResolvedValueOnce(new Response(pointer))
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            objects: [
+              {
+                actions: { download: { href: "https://github-cloud.githubusercontent.com/file" } },
+              },
+            ],
+          }),
+        ),
+      )
+      .mockResolvedValueOnce(new Response("<!doctype html>"));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const response = await server.fetch(
+      new Request("https://site.test/GAMES/Chromium%20Client.html"),
+      {},
+      {},
+    );
+
+    expect(response.headers.get("content-type")).toBe("text/html; charset=utf-8");
+    expect(await response.text()).toBe("<!doctype html>");
+    expect(fetchMock).toHaveBeenCalledTimes(4);
+  });
+
   it("keeps ZIP game files as downloads", async () => {
     vi.stubGlobal(
       "fetch",

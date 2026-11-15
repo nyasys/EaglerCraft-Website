@@ -116,16 +116,22 @@ async function serveGameFile(request: Request, filename: string): Promise<Respon
       headers,
     });
 
-    const contentLength = response.headers.get("content-length");
-    if (contentLength && Number(contentLength) <= 200) {
-      let pointer = parseGitLfsPointer(await response.clone().text());
+    if (response.ok) {
+      const contentLength = response.headers.get("content-length");
+      let pointer =
+        contentLength && Number(contentLength) <= 200
+          ? parseGitLfsPointer(await response.clone().text())
+          : undefined;
       if (!pointer) {
         const probe = await fetch(`${gameFilesUrl}${encodeURIComponent(filename)}`, {
           headers: { range: "bytes=0-200" },
         });
         if (probe.ok) pointer = parseGitLfsPointer(await probe.text());
       }
-      if (pointer) response = await fetchGitLfsObject(pointer, request);
+      if (pointer) {
+        await response.body?.cancel();
+        response = await fetchGitLfsObject(pointer, request);
+      }
     }
   } catch (error) {
     console.error(error);
