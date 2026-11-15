@@ -1,5 +1,4 @@
-
-<p align="center">
+ <p align="center">
   <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives" width="100%">
 </p>
 
@@ -78,6 +77,8 @@
         <br>
         <b>MohAlhossary</b>
       </a>
+      <br>
+      <sub>Developer & Clients</sub>
     </td>
     <td align="center" width="180">
       <a href="https://github.com/AgentCamp69">
@@ -85,6 +86,8 @@
         <br>
         <b>AgentCamp69</b>
       </a>
+      <br>
+      <sub>Developer & Helper</sub>
     </td>
   </tr>
 </table>
