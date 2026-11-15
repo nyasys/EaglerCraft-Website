@@ -107,7 +107,6 @@ var countTo = function(el, val) {
         }
     }
 
-//$($('.total_users span')[4]).animate({top: '-=15', opacity: 1.0 },500, function(){$(this).remove()});
 }
 
 var addThousandSeparator = function(nStr) {
@@ -203,7 +202,6 @@ $(document).ready(function() {
         }
     }
     $('#main').addClass("path_" + location.toString().replace(/[^0-9a-zA-Z]/g, ""));
-    //        $('#main').addClass("verb_" + app.last_route.verb);
 
     $('#menu > li').bind('mouseover', dropdownOpen);
     $('#menu > li').bind('mouseout', dropdownTimer);
