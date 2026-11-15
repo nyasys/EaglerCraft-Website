@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="WEBSITE HERE"><img src="PLAY BUTTON HERE" alt="Play Eaglercraft Directly In Your browser!" width="400"></a>
+  <a href="https://eaglercraft.udwtf.workers.dev/community"><img src="PLAY BUTTON HERE" alt="Play Eaglercraft Directly In Your browser!" width="400"></a>
 </p>
 
 <p align="center">
