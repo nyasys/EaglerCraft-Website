@@ -1,9 +1,10 @@
+
 <p align="center">
   <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives" width="100%">
 </p>
 
 <p align="center">
-  <b>EaglerCraft Archives!</b><br>
+  <b>EaglerCraft Archives</b><br>
   An Eaglercraft Website inspired by the iconic Minecraft Website of 2013, bringing back its classic design, atmosphere, and nostalgia.
 </p>
 
@@ -36,26 +37,16 @@
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/"><b>Website</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source Code</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/issues"><b>Report An Issue</b></a>
+  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
+  <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Report An Issue</b></a>
 </p>
 
 ---
 
-<h2 align="center">Explore Eaglercraft</h2>
-
-<p align="center">
-  Discover Eaglercraft client versions, revisit classic releases, and explore the project's history in one place.
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives Preview" width="100%">
-</p>
-
 <h2 align="center">About the Project</h2>
 
 <p align="center">
-  EaglerCraft Archives is a website inspired by the original Minecraft website from 2013. It brings together a nostalgic design and an organized collection of Eaglercraft-related content.
+  EaglerCraft Archives is a Website inspired by the original Minecraft Website from 2013. It brings together a nostalgic design and an organized collection of Eaglercraft-related content.
 </p>
 
 <p align="center">
@@ -68,17 +59,35 @@
 
 ---
 
-<h2 align="center">Made by NYASYS</h2>
+<h2 align="center">Made by the EaglerCraft Team</h2>
 
-<p align="center">
-  <a href="https://github.com/nyasys">
-    <img src="https://github.com/nyasys.png?size=160" width="100" alt="NYASYS">
-    <br>
-    <b>NYASYS</b>
-  </a>
-  <br>
-  <sub>Creator & Developer</sub>
-</p>
+<table align="center">
+  <tr>
+    <td align="center" width="180">
+      <a href="https://github.com/nyasys">
+        <img src="https://github.com/nyasys.png?size=160" width="80" alt="NYASYS">
+        <br>
+        <b>NYASYS</b>
+      </a>
+      <br>
+      <sub>Developer & Owner</sub>
+    </td>
+    <td align="center" width="180">
+      <a href="https://github.com/MohAlhossary">
+        <img src="https://github.com/MohAlhossary.png?size=160" width="80" alt="MohAlhossary">
+        <br>
+        <b>MohAlhossary</b>
+      </a>
+    </td>
+    <td align="center" width="180">
+      <a href="https://github.com/AgentCamp69">
+        <img src="https://github.com/AgentCamp69.png?size=160" width="80" alt="AgentCamp69">
+        <br>
+        <b>AgentCamp69</b>
+      </a>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <sub>And everyone who has contributed to the project.</sub>
@@ -89,10 +98,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source Code</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/issues"><b>Issues</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
   <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/pulls"><b>Contributing</b></a> ·
-  <a href="https://eaglercraft.udwtf.workers.dev/"><b>Website</b></a>
+  <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Community</b></a>
 </p>
 
 <p align="center">
