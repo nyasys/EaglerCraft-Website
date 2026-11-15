@@ -669,9 +669,13 @@ section.social#tumblr h2 {
   appearance: none;
 }
 
-#game-picker-search:focus {
-  outline: none;
-  box-shadow: none;
+#game-picker-search::-webkit-search-cancel-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+#game-picker-search::-ms-clear {
+  display: none;
 }
 
 #game-picker-status,
