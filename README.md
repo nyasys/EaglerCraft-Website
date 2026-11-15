@@ -28,7 +28,7 @@
 
 <p align="center">
   <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/stargazers">
-    <img src="https://img.shields.io/github/stars/nyasys/EaglerCraft-Website-2013-Style?style=flat&color=F0795A" alt="GitHub stars">
+    <img src="https://img.shields.io/github/stars/nyasys/EaglerCraft-Website-2013-Style?style=flat&color=F0795A" alt="GitHub Stars">
   </a>
   <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/nyasys/EaglerCraft-Website-2013-Style?color=2EA44F" alt="Contributors">
