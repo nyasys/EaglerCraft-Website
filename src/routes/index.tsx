@@ -38,7 +38,7 @@ function loadScriptsInOrder(index = 0) {
 
   const script = document.createElement("script");
   script.src = src;
-  script.dataset.siteScript = "true";
+  script.dataset["siteScript"] = "true";
 
   const loadNext = () => loadScriptsInOrder(index + 1);
   script.addEventListener("load", loadNext, { once: true });
