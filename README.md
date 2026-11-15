@@ -90,14 +90,6 @@
 </table>
 
 <p align="center">
-  <sub>And everyone who has contributed to the project.</sub>
-  <br><br>
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=nyasys/EaglerCraft-Website-2013-Style&max=72&columns=12" alt="Everyone who has contributed to EaglerCraft Archives">
-  </a>
-</p>
-
-<p align="center">
   <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
   <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/pulls"><b>Contributing</b></a> ·
   <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Community</b></a>
