@@ -78,7 +78,7 @@
         <b>MohAlhossary</b>
       </a>
       <br>
-      <sub>Developer & Client Development</sub>
+      <sub>Developer & Client</sub>
     </td>
     <td align="center" width="180">
       <a href="https://github.com/AgentCamp69">
