@@ -94,7 +94,7 @@
 
 <p align="center">
   <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/pulls"><b>Contributing</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/graphs/contributors"><b>Contributing</b></a> ·
   <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Community</b></a>
 </p>
 
@@ -106,6 +106,6 @@
 
 <p align="center">
   <sub>
-    NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT. Minecraft is a trademark of Mojang Synergies AB.
+    NOT AN OFFICIAL EAGLERCRAFT TEAM NOT APPROVED BY OR ASSOCIATED WITH EAGLERCRAFT OR MICROSOFT!
   </sub>
 </p>
