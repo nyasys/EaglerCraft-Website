@@ -75,16 +75,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "EaglerCraft" },
       {
         name: "description",
-        content: "Explore EaglerCraft, learn how to play, and find project information.",
+        content:
+          "Explore EaglerCraft, play Minecraft directly in your browser, and discover the history, origins, and evolution of EaglerCraft.",
       },
       { name: "author", content: "EaglerCraft Team" },
       { property: "og:title", content: "EaglerCraft" },
       {
         property: "og:description",
-        content: "Explore EaglerCraft, learn how to play, and find project information.",
+        content:
+          "Explore EaglerCraft, play Minecraft directly in your browser, and discover the history, origins, and evolution of EaglerCraft.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:image", content: "/images/preview.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/images/preview.jpg" },
     ],
     links: [{ rel: "icon", href: "/favicon.png", type: "image/png" }],
   }),

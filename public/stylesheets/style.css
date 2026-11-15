@@ -542,6 +542,16 @@ section.right.three_col.double {
   margin-left: 40px;
   float: left;
 }
+.homepage-photos {
+  clear: both;
+  float: none;
+  width: 100%;
+}
+.homepage-photos img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 section.social h2 {
   font-size: 18px;
   color: #fff;

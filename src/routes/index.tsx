@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { bodyHtml } from "@/lib/mc2013-body";
 
-const description = "Explore EaglerCraft, learn how to play, and find project information.";
+const description =
+  "Explore EaglerCraft, play Minecraft directly in your browser, and discover the history, origins, and evolution of EaglerCraft.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -11,8 +12,10 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: "EaglerCraft" },
       { property: "og:description", content: description },
+      { property: "og:image", content: "/images/preview.jpg" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/images/preview.jpg" },
     ],
     links: [{ rel: "stylesheet", href: "/stylesheets/style.css" }],
   }),
