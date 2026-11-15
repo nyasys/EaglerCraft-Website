@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/community">
-  <img src="https://eaglercraft.udwtf.workers.dev/#game-picker">
+    <img src="https://raw.githubusercontent.com/nyasys/EaglerCraft-Website-2013-Style/main/assets/play-button.png"
          alt="Play Eaglercraft Directly In Your Browser!"
          width="236">
   </a>
