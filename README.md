@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives" width="100%">
 </p>
@@ -43,22 +44,22 @@
 </p>
 
 <p align="center">
-  <img src="docs/media/readme/valley.webp" alt="Explore the Eaglercraft Archive" width="100%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/valley.webp" alt="Explore the Eaglercraft Archive" width="100%">
 </p>
 
 <p align="center">
-  <img src="docs/media/readme/panel-worlds.webp" alt="Explore Classic Eaglercraft Versions" width="49%">
-  <img src="docs/media/readme/panel-together.webp" alt="Discover the Eaglercraft Multiplayer Experience" width="49%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/panel-worlds.webp" alt="Explore Classic Eaglercraft Versions" width="49%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/panel-together.webp" alt="Discover the Eaglercraft Multiplayer Experience" width="49%">
 </p>
 
 <p align="center">
-  <img src="docs/media/readme/panel-farther.webp" alt="Explore the Evolution of Eaglercraft" width="49%">
-  <img src="docs/media/readme/panel-dimensions.webp" alt="Discover Different Eaglercraft Releases" width="49%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/panel-farther.webp" alt="Explore the Evolution of Eaglercraft" width="49%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/panel-dimensions.webp" alt="Discover Different Eaglercraft Releases" width="49%">
 </p>
 
 <p align="center">
-  <img src="docs/media/readme/panel-terrain.webp" alt="Rediscover Classic Eaglercraft Gameplay" width="49%">
-  <img src="docs/media/readme/panel-mobs.webp" alt="Experience the History of Eaglercraft" width="49%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/panel-terrain.webp" alt="Rediscover Classic Eaglercraft Gameplay" width="49%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/panel-mobs.webp" alt="Experience the History of Eaglercraft" width="49%">
 </p>
 
 <p align="center">
@@ -68,7 +69,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/media/readme/signs-row.webp" alt="The History and Evolution of Eaglercraft" width="100%">
+  <img src="https://eaglercraft.udwtf.workers.dev/docs/media/readme/signs-row.webp" alt="The History and Evolution of Eaglercraft" width="100%">
 </p>
 
 <h2 align="center">About Eaglercraft</h2>
