@@ -14,11 +14,10 @@
 </p>
 
 <p align="center">
-  <a href="https://eaglercraft.udwtf.workers.dev/community">
-    <img src="https://raw.githubusercontent.com/nyasys/EaglerCraft-Website-2013-Style/main/public/images/download_now.png"
-     alt="Play Eaglercraft In Your Browser!"
-     width="236">
-  </a>
+<a href="https://eaglercraft.udwtf.workers.dev/">
+  <img src="https://img.shields.io/badge/-Play%20Now!-2ea44f?style=for-the-badge"
+       alt="Play Now!">
+</a>
 </p>
 
 <p align="center">
