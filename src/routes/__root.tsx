@@ -9,6 +9,7 @@ import {
   type ErrorComponentProps,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { siteDescription } from "@/lib/site-metadata";
 
 function NotFoundComponent() {
   return (
@@ -75,15 +76,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "EaglerCraft" },
       {
         name: "description",
-        content:
-          "Explore EaglerCraft, play Minecraft directly in your browser, and discover the history, origins, and evolution of EaglerCraft.",
+        content: siteDescription,
       },
       { name: "author", content: "EaglerCraft Team" },
       { property: "og:title", content: "EaglerCraft" },
       {
         property: "og:description",
-        content:
-          "Explore EaglerCraft, play Minecraft directly in your browser, and discover the history, origins, and evolution of EaglerCraft.",
+        content: siteDescription,
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
