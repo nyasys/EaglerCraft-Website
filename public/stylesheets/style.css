@@ -505,6 +505,15 @@ footer a:visited {
   text-decoration: none;
 }
 
+.fork-me-baby-container {
+  z-index: 9999;
+}
+
+.fork-me-baby a {
+  display: block;
+  cursor: pointer;
+}
+
 section,
 aside {
   margin-bottom: 3em;
