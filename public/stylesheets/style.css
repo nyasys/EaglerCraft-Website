@@ -391,15 +391,6 @@ p.error,
   color: #5c2;
 }
 
-#beta_badge {
-  position: absolute;
-  top: -40px;
-  left: 144px;
-  width: 119px;
-  height: 62px;
-  background: transparent url(../images/prepurchase.png) no-repeat;
-}
-
 #header_container {
   width: 1000px;
   margin: 0 auto;
@@ -759,22 +750,6 @@ section.social#tumblr h2 {
   top: 1em;
 }
 
-.button {
-  text-indent: -10000px;
-  text-align: left;
-  overflow: hidden;
-  border: none;
-  outline: none;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.button_download_now {
-  background-image: url(../images/download_now.png);
-  width: 212px;
-  height: 44px;
-}
-
 .social h2 a {
   color: #fff;
   text-decoration: none;
@@ -837,28 +812,6 @@ section.social#tumblr h2 {
 
 .platform {
   display: none;
-}
-
-.infobox {
-  padding: 10px;
-  background-color: #333;
-  border: #666 solid 1px;
-  margin: 2em 0;
-  font-size: 16px;
-}
-
-ul.infobox {
-  list-style-type: none;
-}
-
-ul.infobox li {
-  margin-bottom: 1em;
-}
-
-.infobox .label {
-  text-transform: uppercase;
-  font-size: 10px;
-  color: #aaa;
 }
 
 form.spacious input[type="text"],
@@ -925,17 +878,6 @@ a.tee {
 
 .tee.last {
   margin-right: 0;
-}
-
-#minecon-banner {
-  display: block;
-  background-color: #ff0;
-  width: 630px;
-  height: 230px;
-  background: transparent url(../images/minecon_banner.png) no-repeat;
-  overflow: hidden;
-  text-indent: -1000px;
-  margin-top: 26px;
 }
 
 .ir {
