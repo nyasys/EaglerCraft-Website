@@ -222,18 +222,6 @@ $(document).ready(function() {
             e.preventDefault();
             return false;
         });
-    } else if (location == "/download") {
-        $('#platform-all').click(function(event) {
-            event.preventDefault();
-            $('.platform').show();
-            $(this).remove();
-            return false;
-        });
-        if (operating_system) {
-            $('#platform-' + operating_system).show();
-        } else {
-            $('.platform').show();
-        }
     } else if (location == "/classic/list") {
         var durToTime = function(dur) {
             var regex = /(\d+)([dhms])/;
@@ -280,8 +268,6 @@ $(document).ready(function() {
              _gaq.push(['_trackEvent', 'Account', 'Registration-completed','Minecraft']);
         }
     }
-    
-
 });
 
 
