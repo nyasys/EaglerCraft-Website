@@ -1,18 +1,18 @@
- <p align="center">
+<p align="center">
   <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives" width="100%">
 </p>
 
 <p align="center">
   <b>EaglerCraft Archives</b><br>
-  An Eaglercraft Website inspired by the iconic Minecraft Website of 2013, bringing back its classic design, atmosphere, and nostalgia.
+  An Eaglercraft website inspired by the iconic Minecraft website of 2013, bringing back its classic design, atmosphere, and nostalgia.
 </p>
 
 <p align="center">
-  Explore an extensive, carefully organized archive of Eaglercraft Client Versions, all in one place. Discover its origins, early beginnings, development, evolution, major releases, and the community that helped shape its legacy.
+  Explore an extensive, carefully organized archive of Eaglercraft client versions, all in one place. Discover its origins, early beginnings, development, evolution, major releases, and the community that helped shape its legacy.
 </p>
 
 <p align="center">
-  Revisit classic releases, explore the history behind each version, discover forgotten builds, and learn how Eaglercraft evolved over time. From its earliest beginnings to its most recognizable releases, this project aims to preserve and celebrate the history of Eaglercraft.
+  Revisit classic releases, explore the history behind each version, discover forgotten builds, and see how Eaglercraft evolved over time. From its earliest beginnings to its most recognizable releases, this project aims to preserve and celebrate Eaglercraft's history.
 </p>
 
 <p align="center">
@@ -36,8 +36,8 @@
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/"><b>Website</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
-  <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Report An Issue</b></a>
+  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source Code</b></a> ·
+  <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Report an Issue</b></a>
 </p>
 
 ---
@@ -45,11 +45,11 @@
 <h2 align="center">About the Project</h2>
 
 <p align="center">
-  EaglerCraft Archives is a Website inspired by the original Minecraft Website from 2013. It brings together a nostalgic design and an organized collection of Eaglercraft-related content.
+  EaglerCraft Archives is a website inspired by the original Minecraft website from 2013, bringing together a nostalgic design and an organized collection of Eaglercraft content.
 </p>
 
 <p align="center">
-  From early releases and notable versions to the history and evolution of Eaglercraft, the archive is a place to explore and preserve the project's legacy.
+  From early releases and notable versions to the history and evolution of Eaglercraft, the archive brings everything together in one place to explore and preserve the project's legacy.
 </p>
 
 <p align="center">
@@ -78,7 +78,7 @@
         <b>MohAlhossary</b>
       </a>
       <br>
-      <sub>Developer & Clients</sub>
+      <sub>Developer & Client Development</sub>
     </td>
     <td align="center" width="180">
       <a href="https://github.com/AgentCamp69">
@@ -93,7 +93,7 @@
 </table>
 
 <p align="center">
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source Code</b></a> ·
   <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/graphs/contributors"><b>Contributing</b></a> ·
   <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Community</b></a>
 </p>
@@ -106,6 +106,6 @@
 
 <p align="center">
   <sub>
-    NOT AN OFFICIAL EAGLERCRAFT TEAM NOT APPROVED BY OR ASSOCIATED WITH EAGLERCRAFT OR MICROSOFT!
+    NOT AN OFFICIAL EAGLERCRAFT TEAM. NOT APPROVED BY OR ASSOCIATED WITH EAGLERCRAFT OR MICROSOFT!
   </sub>
 </p>
