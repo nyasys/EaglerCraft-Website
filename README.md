@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <b>EaglerCraft: EaglerCraft Archives!</b><br>
+  <b>EaglerCraft Archives!</b><br>
   An Eaglercraft Website inspired by the iconic Minecraft Website of 2013, bringing back the classic design, atmosphere, and nostalgia of Minecraft's golden era!
 </p>
 
