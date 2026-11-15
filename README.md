@@ -58,7 +58,7 @@
 
 ---
 
-<h2 align="center">Made by the EaglerCraft Team:</h2>
+<h2 align="center">Made By The EaglerCraft Team:</h2>
 
 <table align="center">
   <tr>
