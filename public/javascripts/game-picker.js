@@ -6,9 +6,6 @@ const status = document.querySelector("#game-picker-status");
 const list = document.querySelector("#game-picker-list");
 const emptyMessage = document.querySelector("#game-picker-empty");
 
-const gamesBaseUrl = "https://github.com/nyasys/EaglerCraft-Website-2013-Style/raw/refs/heads/main/GAMES/";
-const useLocalGames = ["localhost", "127.0.0.1", "[::1]"].includes(window.location.hostname);
-
 let games = [];
 
 function renderGames(query = "") {
@@ -24,8 +21,7 @@ function renderGames(query = "") {
     const label = document.createElement("span");
     const kind = document.createElement("small");
 
-    const gamesPath = useLocalGames ? "/GAMES/" : gamesBaseUrl;
-    link.href = `${gamesPath}${encodeURIComponent(game.file)}`;
+    link.href = `/GAMES/${encodeURIComponent(game.file)}`;
     label.textContent = game.label;
     kind.textContent = game.type === "zip" ? "Download" : "Play";
     if (game.type === "zip") {
