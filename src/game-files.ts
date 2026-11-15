@@ -141,6 +141,8 @@ async function serveGameFile(request: Request, filename: string): Promise<Respon
     responseHeaders.set("content-disposition", `attachment; filename="${filename}"`);
   } else {
     responseHeaders.set("content-type", "text/html; charset=utf-8");
+    responseHeaders.delete("content-security-policy");
+    responseHeaders.delete("x-frame-options");
   }
   responseHeaders.set("cache-control", "public, max-age=3600");
   responseHeaders.set("x-content-type-options", "nosniff");

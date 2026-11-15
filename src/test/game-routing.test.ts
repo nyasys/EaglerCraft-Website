@@ -11,7 +11,11 @@ describe("game file routing", () => {
     const fetchMock = vi.fn(
       async () =>
         new Response("<!doctype html>", {
-          headers: { "content-type": "text/plain" },
+          headers: {
+            "content-type": "text/plain",
+            "content-security-policy": "default-src 'none'; sandbox",
+            "x-frame-options": "DENY",
+          },
         }),
     );
     vi.stubGlobal("fetch", fetchMock);
@@ -23,6 +27,8 @@ describe("game file routing", () => {
     );
 
     expect(response.headers.get("content-type")).toBe("text/html; charset=utf-8");
+    expect(response.headers.has("content-security-policy")).toBe(false);
+    expect(response.headers.has("x-frame-options")).toBe(false);
     expect(await response.text()).toBe("<!doctype html>");
     expect(fetchMock).toHaveBeenCalledWith(
       "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website-2013-Style/refs/heads/main/GAMES/Chromium%20Client.html",
