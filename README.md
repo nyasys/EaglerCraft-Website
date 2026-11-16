@@ -84,9 +84,9 @@
 
 <p align="center">
   <sub>and everyone who has contributed</sub><br><br>
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=nyasys/EaglerCraft-Website-2013-Style&max=72&columns=12" alt="Everyone who has contributed to EaglerCraft Archives">
-  </a>
+  <a href="https://github.com/lax1dude"><b>lax1dude</b></a>
+  <a href="https://github.com/ayunami2000"><b>lax1dude</b></a>
+  <a href="https://github.com/peytonplayz585"><b>lax1dude</b></a>    
 </p>
 
 <p align="center">
