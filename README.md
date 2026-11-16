@@ -43,7 +43,7 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 <h2 align="center">About The Project:</h2>
 
 <p align="center">
-  EaglerCraft Archives is a website inspired by the original Minecraft website from 2013, bringing together a nostalgic design and an organized collection of Eaglercraft content.
+  EaglerCraft Archives is a website inspired by the original Minecraft website from 2013, bringing together a nostalgic design and an organized collection of Eaglercraft Clients
 </p>
 
 <p align="center">
