@@ -10,7 +10,7 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/">
-    <img src="https://i.imgur.com/PXdE0h1.png" alt="Play Now!" width="300">
+    <img src="https://i.imgur.com/PXdE0h1.png" alt="Play Now!" width="400">
   </a><br>
 </p>
 
