@@ -84,9 +84,9 @@
 
 <p align="center">
   <sub>and everyone who has contributed</sub><br><br>
-  <a href="https://github.com/lax1dude"><b>lax1dude</b></a>
-  <a href="https://github.com/ayunami2000"><b>lax1dude</b></a>
-  <a href="https://github.com/peytonplayz585"><b>lax1dude</b></a>    
+  <a href="https://github.com/lax1dude"><b>lax1dude</b></a> ·
+  <a href="https://github.com/ayunami2000"><b>ayunami2000</b></a> ·
+  <a href="https://github.com/peytonplayz585"><b>peytonplayz585</b></a>
 </p>
 
 <p align="center">
