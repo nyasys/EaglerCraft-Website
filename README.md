@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <b>EaglerCraft Archives (Website)</b><br>
+  <b>EaglerCraft Archive (Website)</b><br>
  
 An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring a nostalgic design and an extensive archive of ALL Eaglercraft Client Versions. Explore Eaglercraft's history, origins, development, major releases, and legacy, everything about Eaglercraft, all in one place!
 </p>
