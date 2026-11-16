@@ -30,7 +30,7 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/f8K8gz3.png" alt="EaglerCraft Website Preview" width="100%">
+  <img src="https://i.imgur.com/OiP8TBT.png" alt="EaglerCraft Website Preview" width="100%">
 </p>
 
 <h2 align="center">Explore Eaglercraft:</h2>
