@@ -85,13 +85,13 @@
 <p align="center">
   <sub>and everyone who has contributed</sub><br><br>
   <a href="https://github.com/lax1dude">
-    <img src="https://github.com/lax1dude.png?size=160" width="60" alt="lax1dude">
+    <img src="https://images.weserv.nl/?url=github.com/lax1dude.png&w=100&h=100&fit=cover&mask=circle" width="60" alt="lax1dude">
   </a>
   <a href="https://github.com/ayunami2000">
-    <img src="https://github.com/ayunami2000.png?size=160" width="60" alt="ayunami2000">
+    <img src="https://images.weserv.nl/?url=github.com/ayunami2000.png&w=100&h=100&fit=cover&mask=circle" width="60" alt="ayunami2000">
   </a>
   <a href="https://github.com/peytonplayz585">
-    <img src="https://github.com/peytonplayz585.png?size=160" width="60" alt="peytonplayz585">
+    <img src="https://images.weserv.nl/?url=github.com/peytonplayz585.png&w=100&h=100&fit=cover&mask=circle" width="60" alt="peytonplayz585">
   </a>
 </p>
 
