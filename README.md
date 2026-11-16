@@ -84,9 +84,15 @@
 
 <p align="center">
   <sub>and everyone who has contributed</sub><br><br>
-  <a href="https://github.com/lax1dude"><b>lax1dude</b></a> ·
-  <a href="https://github.com/ayunami2000"><b>ayunami2000</b></a> ·
-  <a href="https://github.com/peytonplayz585"><b>peytonplayz585</b></a>
+  <a href="https://github.com/lax1dude">
+    <img src="https://github.com/lax1dude.png?size=160" width="60" alt="lax1dude">
+  </a>
+  <a href="https://github.com/ayunami2000">
+    <img src="https://github.com/ayunami2000.png?size=160" width="60" alt="ayunami2000">
+  </a>
+  <a href="https://github.com/peytonplayz585">
+    <img src="https://github.com/peytonplayz585.png?size=160" width="60" alt="peytonplayz585">
+  </a>
 </p>
 
 <p align="center">
