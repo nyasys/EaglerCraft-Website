@@ -5,7 +5,7 @@
 <p align="center">
   <b>EaglerCraft Archives</b><br>
  
-  An Eaglercraft Website inspired by the iconic Minecraft Website of 2013, bringing back its classic design, atmosphere, and nostalgia.
+An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring a nostalgic design and an extensive archive of ALL Eaglercraft Client Versions. Explore Eaglercraft's history, origins, development, major releases, and legacy, everything about Eaglercraft, all in one place!
 </p>
 
 <p align="center">
