@@ -30,7 +30,7 @@
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives Preview" width="100%">
+  <img src="https://imgur.com/a/s1DZq24" alt="EaglerCraft Website Preview" width="100%">
 </p>
 
 <h2 align="center">Explore Eaglercraft:</h2>
