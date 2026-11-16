@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/">
-    <img src="https://i.imgur.com/PXdE0h1.png" alt="Play Now!">
+    <img src="https://i.imgur.com/PXdE0h1.png" alt="Play Now!" width="300">
   </a><br>
 </p>
 
