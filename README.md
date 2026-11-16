@@ -4,14 +4,13 @@
 
 <p align="center">
   <b>EaglerCraft Archives</b><br>
-  An Eaglercraft website inspired by the iconic Minecraft website of 2013, bringing back its classic design, atmosphere, and nostalgia.
+  An Eaglercraft Website inspired by the iconic Minecraft Website of 2013, bringing back its classic design, atmosphere, and nostalgia.
 </p>
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/">
     <img src="https://img.shields.io/badge/Play%20Now!-2ea44f?style=for-the-badge" alt="Play Now!">
   </a><br>
-  <sub>Play Eaglercraft directly in your browser.</sub>
 </p>
 
 <p align="center">
@@ -25,7 +24,7 @@
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/"><b>Website</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source Code</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
   <a href="https://eaglercraft.udwtf.workers.dev/community"><b>Community</b></a>
 </p>
 
@@ -33,9 +32,9 @@
   <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives Preview" width="100%">
 </p>
 
-<h2 align="center">Explore Eaglercraft</h2>
+<h2 align="center">Explore Eaglercraft:</h2>
 
-- **Client Versions:** Explore an extensive, carefully organized archive of Eaglercraft client versions, all in one place.
+- **Client Versions:** Explore an extensive, carefully organized archive of Eaglercraft Client Versions, all in one place.
 - **Project History:** Discover Eaglercraft's origins, early beginnings, development, evolution, and major releases.
 - **Classic Releases:** Revisit older versions, discover forgotten builds, and explore the releases that helped shape Eaglercraft.
 - **Community:** Learn about the people and community behind Eaglercraft and its development over the years.
