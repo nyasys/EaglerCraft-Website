@@ -39,7 +39,7 @@
 - **Classic Releases:** Revisit older versions, discover forgotten builds, and explore the releases that helped shape Eaglercraft.
 - **Community:** Learn about the people and community behind Eaglercraft and its development over the years.
 
-<h2 align="center">About The Project</h2>
+<h2 align="center">About The Project:</h2>
 
 <p align="center">
   EaglerCraft Archives is a website inspired by the original Minecraft website from 2013, bringing together a nostalgic design and an organized collection of Eaglercraft content.
@@ -53,7 +53,7 @@
   <b>Everything Eaglercraft, all in one place.</b>
 </p>
 
-<h2 align="center">Made By The EaglerCraft Team</h2>
+<h2 align="center">Made By The EaglerCraft Team:</h2>
 
 <table align="center">
   <tr>
