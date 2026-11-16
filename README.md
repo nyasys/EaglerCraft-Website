@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/">
-    <img src="https://img.shields.io/badge/Play%20Now!-2ea44f?style=for-the-badge" alt="Play Now!">
+    <img src="https://i.imgur.com/PXdE0h1.png" alt="Play Now!">
   </a><br>
 </p>
 
