@@ -31,6 +31,8 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 
 <p align="center">
   <img src="https://i.imgur.com/OiP8TBT.png" alt="EaglerCraft Website Preview" width="100%">
+ 
+  <img src="https://i.postimg.cc/2SYKxYrR/Screenshot-2026-11-18-8-13-17-AM.png" alt="EaglerCraft Client Preview" width="100%">
 </p>
 
 <h2 align="center">Explore Eaglercraft:</h2>
@@ -63,7 +65,7 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
         <img src="https://github.com/nyasys.png?size=160" width="80" alt="NYASYS"><br>
         <b>NYASYS</b>
       </a><br>
-      <sub>Developer & Owner</sub>
+      <sub>Developer & Website</sub>
     </td>
     <td align="center" width="180">
       <a href="https://github.com/MohAlhossary">
