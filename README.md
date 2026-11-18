@@ -35,7 +35,7 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
   <img src="https://i.postimg.cc/2SYKxYrR/Screenshot-2026-11-18-8-13-17-AM.png" alt="EaglerCraft Client Preview" width="100%">
 </p>
 
-<h2 align="center">Explore Eaglercraft:</h2>
+<h2 align="center">Explore Eaglercraft Archive:</h2>
 
 - **Client Versions:** Explore an extensive, carefully organized archive of Eaglercraft Client Versions, all in one place.
 - **Project History:** Discover Eaglercraft's origins, early beginnings, development, evolution, and major releases.
