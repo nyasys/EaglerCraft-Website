@@ -98,7 +98,7 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 </p>
 
 <p align="center">
-  <a href="https://github.com/nyasys/EaglerCraft-Website"><b>Source Code</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website"><b>Source-Code</b></a> ·
   <a href="https://github.com/nyasys/EaglerCraft-Website/graphs/contributors"><b>Contributing</b></a> ·
   <a href="https://eaglercraft.udwtf.workers.dev/community-credits"><b>Community</b></a>
 </p>
