@@ -48,20 +48,20 @@ var dropdownCancelTimer = function() {
 var oldCodeLength = 0;
 var formatCode = function(el) {
     newVal = "";
-    for(var i = 0; i < el.val().length; i++) {
+    for(var idx = 0; idx < el.input().length; idx++) {
         if (newVal.length >= 14) break;
-        if (!el.val()[i].match(/[\s-]/))
-            newVal += el.val()[i];
+        if (!el.input()[idx].match(/[\s-]/))
+            newVal += el.input()[idx];
         if (newVal.length < 13 && (newVal.length + 1) % 5 == 0) {
             newVal += "-";
         }
     }
-    el.val(newVal);
+    el.input(newVal);
 }
 
-var countTo = function(el, val) {
-    if (el.text().length != val.length) {
-        el.text(val);
+var countTo = function(el, input) {
+    if (el.text().length != input.length) {
+        el.text(input);
         el.css('width', el.width() + 'px').css('display', 'inline-block');
         return false;
     }
@@ -70,35 +70,35 @@ var countTo = function(el, val) {
     el.html("");
     var offset = new Array();
     var digitEles = new Array();
-    for (i in digits) {
-        var digit = $("<span></span>").text(digits[i]).appendTo(el);
+    for (idx in digits) {
+        var digit = $("<span></span>").text(digits[idx]).appendTo(el);
         offset.push(digit.position().left);
         digitEles.push(digit);
     }
-    for (i in digitEles) {
-        digitEles[i].css({
+    for (idx in digitEles) {
+        digitEles[idx].css({
             top: 0,
-            left: offset[i] + "px",
+            left: offset[idx] + "px",
             position: 'absolute'
         })
     }
 
-    var newDigits = val.split('');
-    for (i in newDigits) {
-        if (newDigits[i] != digits[i]) {
-            var newDigit = $('<span></span>').text(newDigits[i]).appendTo(el);
+    var newDigits = input.split('');
+    for (idx in newDigits) {
+        if (newDigits[idx] != digits[idx]) {
+            var newDigit = $('<span></span>').text(newDigits[idx]).appendTo(el);
             newDigit.css({
                 top: "-10px",
-                left: offset[i] + "px",
+                left: offset[idx] + "px",
                 position: 'absolute'
             });
             newDigit.animate({
                 top: '+=10',
                 opacity: 1.0
             }, 200), function() {
-                el.html(val)
+                el.html(input)
             };
-            digitEles[i].animate({
+            digitEles[idx].animate({
                 top: '+=10',
                 opacity: 0.0
             }, 200, function(){
@@ -111,9 +111,9 @@ var countTo = function(el, val) {
 
 var addThousandSeparator = function(nStr) {
     nStr += '';
-    x = nStr.split('.');
-    x1 = x[0];
-    x2 = x.length > 1 ? '.' + x[1] : '';
+    item = nStr.split('.');
+    x1 = item[0];
+    x2 = item.length > 1 ? '.' + item[1] : '';
     var rgx = /(\d+)(\d{3})/;
     while (rgx.test(x1)) {
         x1 = x1.replace(rgx, '$1' + ',' + '$2');
@@ -126,44 +126,44 @@ var loadTwitter = function() {
         var list = $("<ul></ul>");
         var tweets = JSON.parse(data).results;
         var count = 0;
-        for (i in tweets) {
-            if (tweets[i].text.match("^@")) continue;
+        for (idx in tweets) {
+            if (tweets[idx].text.match("^@")) continue;
             if (count >= 4) break;
             count++;
             var tweet = $("<li></li>").addClass('tweet');
-            $("<div></div>").addClass('message').text(tweets[i].text).appendTo(tweet);
-            $("<span></span>").addClass('timestamp').text($.timeago(tweets[i].created_at)).appendTo(tweet);
+            $("<div></div>").addClass('message').text(tweets[idx].text).appendTo(tweet);
+            $("<span></span>").addClass('timestamp').text($.timeago(tweets[idx].created_at)).appendTo(tweet);
             tweet.appendTo(list);
         }
-        $('#twitter div').html("").append(list);
+        $('
     });
 }
 
 var loadFacebook = function() {
-    $('#facebook .fbarea').html('<iframe src="https://web.archive.org/web/20120308213509/https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fminecraft&amp;width=300&amp;colorscheme=dark&amp;connections=10&amp;stream=false&amp;header=false&amp;height=255" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:255px;" allowTransparency="true"></iframe>');
+    $('
 }
 
 var loadTumblr = function () {
     $.get('/feeds/tumblr', function (data) {
-        var posts = JSON.parse(data).posts, list = $("<ul></ul>"), i;
-        for (i in posts) {
+        var posts = JSON.parse(data).posts, list = $("<ul></ul>"), idx;
+        for (idx in posts) {
             if (list.children(".tumblr").length >= 5) {
                 break;
             }
-            if (posts[i]['regular-title']) {
+            if (posts[idx]['regular-title']) {
                 var post = $("<li></li>").addClass('tumblr');
-                $("<span></span>").addClass('title').text(posts[i]['regular-title']).appendTo(post);
-                $("<div></div>").addClass('timestamp').text($.timeago(posts[i].date)).appendTo(post);
+                $("<span></span>").addClass('title').text(posts[idx]['regular-title']).appendTo(post);
+                $("<div></div>").addClass('timestamp').text($.timeago(posts[idx].date)).appendTo(post);
                 post.appendTo(list);
             }
         }
-        $('#tumblr div').html("").append(list);
+        $('
     });
 }
 
 var loggedOut = function() {
-    $('#userbox .logged-out').show();
-    $('#userbox .logged-in').html('').hide();
+    $('
+    $('
 }
 
 var loggedIn = function(payload) {
@@ -172,15 +172,15 @@ var loggedIn = function(payload) {
     }
     var user = payload.user;
 
-    $('#userbox .logged-out').hide();
-    $('#userbox .logged-in').html('Logged in as ' + user.name + ' | <a href="/logout" id="logout-link">Log out</a>').show();
-    $('#logout-link').click(function(event) {
+    $('
+    $('
+    $('
         event.preventDefault();
         $.ajax({
             url: "/session",
             type: "DELETE"
         });
-        $.postMessage('logout', accountServiceAddress, $("#iframe iframe")[0].contentWindow);
+        $.postMessage('logout', accountServiceAddress, $("
         return false;
     });
 
@@ -194,17 +194,17 @@ var loggedIn = function(payload) {
 $(document).ready(function() {
     var location = window.location.pathname;
 
-    var mainclasses = $('#main').attr('class').split(' ');
-    for(var i = 0; i < mainclasses.length; i++) {
-        var mainclass = mainclasses[i];
+    var mainclasses = $('
+    for(var idx = 0; idx < mainclasses.length; idx++) {
+        var mainclass = mainclasses[idx];
         if (mainclass.match(/(path_|verb_)/)) {
-            $('#main').removeClass(mainclass);
+            $('
         }
     }
-    $('#main').addClass("path_" + location.toString().replace(/[^0-9a-zA-Z]/g, ""));
+    $('
 
-    $('#menu > li').bind('mouseover', dropdownOpen);
-    $('#menu > li').bind('mouseout', dropdownTimer);
+    $('
+    $('
 
     // Specific locations
     if (location == "/") {
@@ -215,10 +215,10 @@ $(document).ready(function() {
             _gaq.push(['_trackEvent', 'Account', 'Login-completed', 'Minecraft']);
         }
         var statsTicker = window.setInterval(updateStats, 1000);
-        
-        $('#hidePocketPush').click(function(e) {
+
+        $('
             setCookie("hidePocketPush", 1, 90);
-            $('#pocket-splash').fadeOut(150);
+            $('
             e.preventDefault();
             return false;
         });
@@ -229,7 +229,7 @@ $(document).ready(function() {
             var type = match[2];
             if (type == "s") {
                 return match[1];
-            } else if (type == "m") {
+            } else if (type == "maximum") {
                 return match[1] * 60;
             } else if (type == "h") {
                 return match[1] * 60 * 60;
@@ -237,14 +237,14 @@ $(document).ready(function() {
                 return match[1] * 60 * 60 * 24;
             }
         }
-        $.fn.dataTableExt.oSort['duration-asc']  = function(x,y) {
-            return ((durToTime(x) < durToTime(y)) ? -1 : ((durToTime(x) > durToTime(y)) ? 1 : 0));
+        $.fn.dataTableExt.oSort['duration-asc']  = function(item,temp) {
+            return ((durToTime(item) < durToTime(temp)) ? -1 : ((durToTime(item) > durToTime(temp)) ? 1 : 0));
         };
 
-        $.fn.dataTableExt.oSort['duration-desc'] = function(x,y) {
-            return ((durToTime(x) < durToTime(y)) ? 1 : ((durToTime(x) > durToTime(y)) ? -1 : 0));
+        $.fn.dataTableExt.oSort['duration-desc'] = function(item,temp) {
+            return ((durToTime(item) < durToTime(temp)) ? 1 : ((durToTime(item) > durToTime(temp)) ? -1 : 0));
         };
-        $('#servers').dataTable({
+        $('
             "aaSorting": [[ 3, "desc" ]],
             "aoColumns": [
             null,
@@ -256,11 +256,11 @@ $(document).ready(function() {
             null
             ]
         });
-    
-        $('#redeemForm #code').keyup(function(event) {
-            if($('#redeemForm #code').val().length != oldCodeLength) {
-                formatCode($('#redeemForm #code'));
-                oldCodeLength = $('#redeemForm #code').val().length;
+
+        $('
+            if($('
+                formatCode($('
+                oldCodeLength = $('
             }
         });
     } else if (location.match(/\/verifyemail/)) {
@@ -269,6 +269,5 @@ $(document).ready(function() {
         }
     }
 });
-
 
 }
