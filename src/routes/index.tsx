@@ -1,22 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 import { bodyHtml } from "@/lib/mc2013-body";
 import { siteDescription } from "@/lib/site-metadata";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "EaglerCraft" },
-      { name: "description", content: siteDescription },
-      { property: "og:title", content: "EaglerCraft" },
-      { property: "og:description", content: siteDescription },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-    links: [{ rel: "stylesheet", href: "/stylesheets/style.css" }],
-  }),
-  component: Index,
-});
 
 const scripts = [
   "/javascripts/libs/modernizr.min.js",
@@ -37,9 +22,10 @@ function loadScriptsInOrder(index = 0) {
 
   const script = document.createElement("script");
   script.src = src;
-  script.dataset["siteScript"] = "true";
+  script.dataset.siteScript = "true";
 
   const loadNext = () => loadScriptsInOrder(index + 1);
+
   script.addEventListener("load", loadNext, { once: true });
   script.addEventListener(
     "error",
@@ -49,6 +35,7 @@ function loadScriptsInOrder(index = 0) {
     },
     { once: true },
   );
+
   document.body.append(script);
 }
 
@@ -59,5 +46,25 @@ function Index() {
     }
   }, []);
 
-  return <div style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: bodyHtml }} />;
+  return (
+    <div
+      style={{ display: "contents" }}
+      dangerouslySetInnerHTML={{ __html: bodyHtml }}
+    />
+  );
 }
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "EaglerCraft" },
+      { name: "description", content: siteDescription },
+      { property: "og:title", content: "EaglerCraft" },
+      { property: "og:description", content: siteDescription },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
+    links: [{ rel: "stylesheet", href: "/stylesheets/style.css" }],
+  }),
+  component: Index,
+});
