@@ -1,4 +1,69 @@
 ts
+const gameFilesUrl = "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/";
+const lfsBatchUrl = "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch";
+
+type GitLfsPointer = {
+  oid: string;
+  size: number;
+};
+
+type GitLfsBatchResponse = {
+  objects?: Array<{
+    actions?: {
+      download?: {
+        href?: string;
+      };
+    };
+  }>;
+};
+
+function getGameFilename(pathname: string): string | undefined {
+  if (!pathname.startsWith("/GAMES/")) return;
+  let filename: string;
+  try {
+    filename = decodeURIComponent(pathname.slice("/GAMES/".length));
+  } catch {
+    return;
+  }
+  if (!/^[A-Za-z0-9._ -]+\.(html|zip)$/i.test(filename) || filename.includes("/") || filename.includes("\\")) {
+    return;
+  }
+  return filename;
+}
+
+function parseGitLfsPointer(contents: string): GitLfsPointer | undefined {
+  const match = /^version https:\/\/git-lfs\.github\.com\/spec\/v1\r?\noid sha256:([a-f0-9]{64})\r?\nsize (\d+)$/.exec(contents.trim());
+  if (!match) return;
+  const oid = match[1];
+  const size = Number(match[2]);
+  if (!oid || !Number.isSafeInteger(size)) return;
+  return { oid, size };
+}
+
+async function fetchGitLfsObject(pointer: GitLfsPointer, request: Request): Promise<Response> {
+  const batch = await fetch(lfsBatchUrl, {
+    method: "POST",
+    headers: {
+      accept: "application/vnd.git-lfs+json",
+      "content-type": "application/vnd.git-lfs+json",
+      "user-agent": "git-lfs/3.5.0",
+    },
+    body: JSON.stringify({
+      operation: "download",
+      transfers: ["basic"],
+      objects: [pointer],
+    }),
+  });
+  if (!batch.ok) throw new Error(`LFS failed: ${batch.status}`);
+  const payload = (await batch.json()) as GitLfsBatchResponse;
+  const href = payload.objects?.[0]?.actions?.download?.href;
+  if (!href) throw new Error("No LFS download URL");
+  const headers = new Headers();
+  const range = request.headers.get("range");
+  if (range) headers.set("range", range);
+  return fetch(href, { method: request.method, headers });
+}
+
 async function serveGameFile(request: Request, filename: string): Promise<Response> {
   const headers = new Headers();
   const range = request.headers.get("range");
@@ -12,46 +77,31 @@ async function serveGameFile(request: Request, filename: string): Promise<Respon
     });
 
     if (response.ok) {
-      const contentLengthHeader = response.headers.get("content-length");
-      const contentLength = contentLengthHeader ? parseInt(contentLengthHeader, 10) : 0;
-      
+      const contentLength = parseInt(response.headers.get("content-length") || "0", 10);
       let pointer: GitLfsPointer | undefined;
 
-      // FIX: Only call .text() if the file is small enough to actually be a pointer.
-      // Git LFS pointers are typically aounrd: 130 bytes. I use 500 it's safe.
       if (contentLength > 0 && contentLength < 500) {
         pointer = parseGitLfsPointer(await response.clone().text());
-      } 
-      
-      
+      }
+
       if (!pointer) {
         const probe = await fetch(`${gameFilesUrl}${encodeURIComponent(filename)}`, {
           headers: { range: "bytes=0-200" },
         });
-        // We only check the probe if it's actually small (which a range request will be)
-        if (probe.ok) {
-          pointer = parseGitLfsPointer(await probe.text());
-        }
+        if (probe.ok) pointer = parseGitLfsPointer(await probe.text());
       }
 
       if (pointer) {
-        // Use body.cancel() to cleanly close the connection to the pointer file
         if (response.body) await response.body.cancel();
         response = await fetchGitLfsObject(pointer, request);
       }
     }
   } catch (error) {
-    console.error(error);
     return new Response("Game file could not be loaded.", { status: 502 });
   }
 
-  
-  if (response.status === 404) {
-    return new Response("Game file not found.", { status: 404 });
-  }
-  if (!response.ok) {
-     return new Response("Game file could not be loaded.", { status: 502 });
-  }
+  if (response.status === 404) return new Response("Game file not found.", { status: 404 });
+  if (!response.ok) return new Response("Game file could not be loaded.", { status: 502 });
 
   const responseHeaders = new Headers(response.headers);
   if (filename.toLowerCase().endsWith(".zip")) {
@@ -62,10 +112,22 @@ async function serveGameFile(request: Request, filename: string): Promise<Respon
     responseHeaders.delete("content-security-policy");
     responseHeaders.delete("x-frame-options");
   }
-  
+  responseHeaders.set("cache-control", "public, max-age=3600");
+  responseHeaders.set("x-content-type-options", "nosniff");
+
   return new Response(request.method === "HEAD" ? null : response.body, {
     status: response.status,
     statusText: response.statusText,
     headers: responseHeaders,
   });
+}
+
+export async function handleGameFileRequest(request: Request, url: URL): Promise<Response | undefined> {
+  if (url.pathname !== "/GAMES" && !url.pathname.startsWith("/GAMES/")) return;
+  if (request.method !== "GET" && request.method !== "HEAD") {
+    return new Response("Method not allowed.", { status: 405, headers: { allow: "GET, HEAD" } });
+  }
+  const filename = getGameFilename(url.pathname);
+  if (!filename) return new Response("Game file not found.", { status: 404 });
+  return serveGameFile(request, filename);
 }
