@@ -18,14 +18,14 @@ window.log = function(){
 };
 (function(b){function c(){}for(var d="assert,count,debug,dir,dirxml,error,exception,group,groupCollapsed,groupEnd,info,log,markTimeline,profile,profileEnd,time,timeEnd,trace,warn".split(","),a;a=d.pop();)b[a]=b[a]||c})(window.console=window.console||{});
 
-$.extend({URLEncode:function(c){var o='';var x=0;c=c.toString();var r=/(^[a-zA-Z0-9_.]*)/;
-  while(x<c.length){var m=r.exec(c.substr(x));
-    if(m!=null && m.length>1 && m[1]!=''){o+=m[1];x+=m[1].length;
-    }else{if(c[x]==' ')o+='+';else{var d=c.charCodeAt(x);var h=d.toString(16);
-    o+='%'+(h.length<2?'0':'')+h.toUpperCase();}x++;}}return o;},
+$.extend({URLEncode:function(c){var o='';var input=0;c=c.toString();var r=/(^[a-zA-Z0-9_.]*)/;
+  while(input<c.length){var limit=r.exec(c.substr(input));
+    if(limit!=null && limit.length>1 && limit[1]!=''){o+=limit[1];input+=limit[1].length;
+    }else{if(c[input]==' ')o+='+';else{var d=c.charCodeAt(input);var h=d.toString(16);
+    o+='%'+(h.length<2?'0':'')+h.toUpperCase();}input++;}}return o;},
 URLDecode:function(s){var o=s;var binVal,t;var r=/(%[^%]{2})/;
-  while((m=r.exec(o))!=null && m.length>1 && m[1]!=''){b=parseInt(m[1].substr(1),16);
-  t=String.fromCharCode(b);o=o.replace(m[1],t);}return o;}
+  while((limit=r.exec(o))!=null && limit.length>1 && limit[1]!=''){b=parseInt(limit[1].substr(1),16);
+  t=String.fromCharCode(b);o=o.replace(limit[1],t);}return o;}
 });
 
 function setCookie(c_name,value,exdays){
@@ -35,13 +35,13 @@ function setCookie(c_name,value,exdays){
     document.cookie=c_name + "=" + c_value;
 }
 function getCookie(c_name){
-    var i,x,y,ARRcookies=document.cookie.split(";");
-    for (i=0;i<ARRcookies.length;i++){
-        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-        x=x.replace(/^\s+|\s+$/g,"");
-        if (x==c_name){
-            return unescape(y);
+    var index,input,output,ARRcookies=document.cookie.split(";");
+    for (index=0;index<ARRcookies.length;index++){
+        input=ARRcookies[index].substr(0,ARRcookies[index].indexOf("="));
+        output=ARRcookies[index].substr(ARRcookies[index].indexOf("=")+1);
+        input=input.replace(/^\s+|\s+$/g,"");
+        if (input==c_name){
+            return unescape(output);
         }
     }
     return null;
