@@ -9,7 +9,7 @@ type ServerEntry = {
 
 let serverEntryPromise: Promise<ServerEntry> | undefined;
 
-// quick hack to fix h3 swallowing errors in ssr, remove later maybe?
+// fixed h3 swallowing errors in ssr.
 function checkH3Err(body: string): boolean {
   try {
     const p = JSON.parse(body) as { unhandled?: unknown; message?: unknown };
