@@ -10,7 +10,7 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
   try {
     return await next();
   } catch (err) {
-    // let status codes bubble up
+    // let status codes merge up
     if (err && typeof err === 'object' && 'statusCode' in err) {
       throw err;
     }
