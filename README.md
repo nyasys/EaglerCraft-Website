@@ -16,16 +16,16 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/"><b>Website</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source-Code</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website"><b>Source-Code</b></a> ·
   <a href="https://eaglercraft.udwtf.workers.dev/community-credits"><b>Community</b></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/stargazers">
-    <img src="https://img.shields.io/github/stars/nyasys/EaglerCraft-Website-2013-Style?style=flat&color=F0795A" alt="GitHub Stars">
+  <a href="https://github.com/nyasys/EaglerCraft-Website/stargazers">
+    <img src="https://img.shields.io/github/stars/nyasys/EaglerCraft-Website?style=flat&color=F0795A" alt="GitHub Stars">
   </a>
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/nyasys/EaglerCraft-Website-2013-Style?color=2EA44F" alt="Contributors">
+  <a href="https://github.com/nyasys/EaglerCraft-Website/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/nyasys/EaglerCraft-Website?color=2EA44F" alt="Contributors">
   </a>
 </p>
 
@@ -98,8 +98,8 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 </p>
 
 <p align="center">
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style"><b>Source Code</b></a> ·
-  <a href="https://github.com/nyasys/EaglerCraft-Website-2013-Style/graphs/contributors"><b>Contributing</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website"><b>Source Code</b></a> ·
+  <a href="https://github.com/nyasys/EaglerCraft-Website/graphs/contributors"><b>Contributing</b></a> ·
   <a href="https://eaglercraft.udwtf.workers.dev/community-credits"><b>Community</b></a>
 </p>
 
