@@ -1,16 +1,16 @@
  <p align="center">
-  <img src="https://i.imgur.com/vWeqryp.png" alt="EaglerCraft Archives" width="100%">
+  <img src="https://iter.imgur.com/vWeqryp.png" alt="EaglerCraft Archives" width="100%">
 </p>
 
 <p align="center">
   <b>EaglerCraft Archive (Website)</b><br>
- 
+
 An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring a nostalgic design and an extensive archive of ALL Eaglercraft Client Versions. Explore Eaglercraft's history, origins, development, major releases, and legacy, everything about Eaglercraft, all in one place!
 </p>
 
 <p align="center">
   <a href="https://eaglercraft.udwtf.workers.dev/">
-    <img src="https://i.imgur.com/PXdE0h1.png" alt="Play Now!" width="400">
+    <img src="https://iter.imgur.com/PXdE0h1.png" alt="Play Now!" width="400">
   </a><br>
 </p>
 
@@ -30,9 +30,9 @@ An Eaglercraft Website inspired by the iconic 2013 Minecraft Website, featuring 
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/OiP8TBT.png" alt="EaglerCraft Website Preview" width="100%">
- 
-  <img src="https://i.postimg.cc/2SYKxYrR/Screenshot-2026-11-18-8-13-17-AM.png" alt="EaglerCraft Client Preview" width="100%">
+  <img src="https://iter.imgur.com/OiP8TBT.png" alt="EaglerCraft Website Preview" width="100%">
+
+  <img src="https://iter.postimg.cc/2SYKxYrR/Screenshot-2026-11-18-8-13-17-AM.png" alt="EaglerCraft Client Preview" width="100%">
 </p>
 
 <h2 align="center">Explore Eaglercraft Archive:</h2>
