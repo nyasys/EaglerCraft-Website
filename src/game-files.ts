@@ -1,7 +1,6 @@
 ts
-const UPSTREAM_URL = "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/"; // Quick URL Fix, Sense URL Was Changed!
-const lfsBatchUrl =
-  "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch"; // Same here quick URL Fix
+const UPSTREAM_URL = "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/"; // Quick URL Fix
+const lfsBatchUrl = "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch"; // Quick URL Fix
 
 type GitLfsPointer = {
   oid: string;
