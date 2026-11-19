@@ -9,7 +9,17 @@ type ServerEntry = {
 
 let serverEntryPromise: Promise<ServerEntry> | undefined;
 
-async function getServerEntry(): Promise<ServerEntry> {
+// quick hack to fix h3 swallowing errors in ssr, remove later maybe?
+function checkH3Err(body: string): boolean {
+  try {
+    const p = JSON.parse(body) as { unhandled?: unknown; message?: unknown };
+    return p.unhandled === true && p.message === "HTTPError";
+  } catch {
+    return false;
+  }
+}
+
+function getServerEntry(): Promise<ServerEntry> {
   if (!serverEntryPromise) {
     serverEntryPromise = import("@tanstack/react-start/server-entry").then(
       (m) => (m.default ?? m) as ServerEntry,
@@ -18,26 +28,17 @@ async function getServerEntry(): Promise<ServerEntry> {
   return serverEntryPromise;
 }
 
-async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
-  if (response.status < 500) return response;
-  const contentType = response.headers.get("content-type") ?? "";
-  if (!contentType.includes("application/json")) return response;
-  const body = await response.clone().text();
-  if (!isH3SwallowedErrorBody(body)) return response;
-  console.error(consumeLastCapturedError() ?? new Error(`h3 swallowed SSR error: ${body}`));
+async function normalizeCatastrophicSsrResponse(res: Response): Promise<Response> {
+  if (res.status < 500) return res;
+  const cType = res.headers.get("content-type") ?? "";
+  if (!cType.includes("application/json")) return res;
+  const rawBody = await res.clone().text();
+  if (!checkH3Err(rawBody)) return res;
+  console.error(consumeLastCapturedError() ?? new Error(`h3 swallowed SSR error: ${rawBody}`));
   return new Response(renderErrorPage(), {
     status: 500,
     headers: { "content-type": "text/html; charset=utf-8" },
   });
-}
-
-function isH3SwallowedErrorBody(body: string): boolean {
-  try {
-    const payload = JSON.parse(body) as { unhandled?: unknown; message?: unknown };
-    return payload.unhandled === true && payload.message === "HTTPError";
-  } catch {
-    return false;
-  }
 }
 
 export default {
@@ -46,11 +47,11 @@ export default {
     const gameResponse = await handleGameFileRequest(request, url);
     if (gameResponse) return gameResponse;
     try {
-      const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
-    } catch (error) {
-      console.error(error);
+      const h = await getServerEntry();
+      const r = await h.fetch(request, env, ctx);
+      return await normalizeCatastrophicSsrResponse(r);
+    } catch (err) {
+      console.error(err);
       return new Response(renderErrorPage(), {
         status: 500,
         headers: { "content-type": "text/html; charset=utf-8" },
