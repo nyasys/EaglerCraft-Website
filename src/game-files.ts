@@ -1,6 +1,6 @@
 ts
-const UPSTREAM_URL = "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/"; // Quick URL Fix
-const lfsBatchUrl = "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch"; // Quick URL Fix
+const gameFilesUrl = "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/"; // Corrected URL
+const lfsBatchUrl = "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch"; // Corrected LFS URL
 
 type GitLfsPointer = {
   oid: string;
