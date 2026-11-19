@@ -1,6 +1,5 @@
-ts
-const gameFilesUrl = "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/"; // Corrected URL
-const lfsBatchUrl = "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch"; // Corrected LFS URL
+const gameFilesUrl = "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/";
+const lfsBatchUrl = "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch";
 
 type GitLfsPointer = {
   oid: string;
