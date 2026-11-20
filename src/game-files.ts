@@ -1,5 +1,5 @@
 const gameFilesUrl =
-  "https://raw.githubusercontent.com/nyasys/EaglerCraft-Website/main/GAMES/";
+  "https://github.com/nyasys/EaglerCraft-Website/tree/main/GAMES";
 const lfsBatchUrl =
   "https://github.com/nyasys/EaglerCraft-Website.git/info/lfs/objects/batch";
 
