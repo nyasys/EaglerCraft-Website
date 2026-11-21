@@ -1,10 +1,10 @@
-const playNow = document.querySelector("
-const picker = document.querySelector("
+const playNow = document.querySelector("#play-now");
+const picker = document.querySelector("#game-picker");
 const closeButton = picker.querySelector(".game-picker-close");
-const search = document.querySelector("
-const status = document.querySelector("
-const list = document.querySelector("
-const emptyMessage = document.querySelector("
+const search = document.querySelector("#game-picker-search");
+const status = document.querySelector("#game-picker-status");
+const list = document.querySelector("#game-picker-list");
+const emptyMessage = document.querySelector("#game-picker-empty");
 
 let games = [];
 

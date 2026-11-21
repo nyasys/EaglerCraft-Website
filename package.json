@@ -9,7 +9,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
-    "serve:static": "python3 scripts/serve-static-site.py",
+    "serve:static": "rustc -O scripts/serve_static_site.rs -o scripts/serve-static-site && scripts/serve-static-site",
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"public/**/*.{html,css,js}\" package.json vite.config.ts vitest.config.ts eslint.config.js",
     "test": "vitest run",
