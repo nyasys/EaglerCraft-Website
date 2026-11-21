@@ -100,6 +100,7 @@ async function serveGameFile(
   filename: string,
 ): Promise<Response> {
   const headers = new Headers();
+  headers.set("user-agent", "EaglerCraft-Website/1.0");
   const range = request.headers.get("range");
 
   if (range) {
@@ -109,36 +110,34 @@ async function serveGameFile(
   let response: Response;
 
   try {
-    response = await fetch(
-      `${gameFilesUrl}${encodeURIComponent(filename)}`,
-      {
-        method: request.method,
-        headers,
-      },
-    );
+    response = new Response(null, { status: 502 });
+
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      try {
+        response = await fetch(
+          `${gameFilesUrl}${encodeURIComponent(filename)}`,
+          {
+            method: request.method,
+            headers,
+          },
+        );
+        break;
+      } catch {
+        if (attempt === 1) {
+          return new Response("Game file could not be loaded.", { status: 502 });
+        }
+      }
+    }
 
     if (response.ok) {
       const contentLength = Number.parseInt(
         response.headers.get("content-length") || "0",
         10,
       );
-
-      let pointer: GitLfsPointer | undefined;
-
-      if (contentLength > 0 && contentLength < 500) {
-        pointer = parseGitLfsPointer(await response.clone().text());
-      }
-
-      if (!pointer) {
-        const probe = await fetch(
-          `${gameFilesUrl}${encodeURIComponent(filename)}`,
-          { headers: { range: "bytes=0-200" } },
-        );
-
-        if (probe.ok) {
-          pointer = parseGitLfsPointer(await probe.text());
-        }
-      }
+      const pointer =
+        contentLength > 0 && contentLength < 500
+          ? parseGitLfsPointer(await response.clone().text())
+          : undefined;
 
       if (pointer) {
         if (response.body) {
