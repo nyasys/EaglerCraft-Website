@@ -99,47 +99,53 @@ async function serveGameFile(
   request: Request,
   filename: string,
 ): Promise<Response> {
+  const headers = new Headers();
+  headers.set("user-agent", "EaglerCraft-Website/1.0");
+  const range = request.headers.get("range");
+
+  if (range) {
+    headers.set("range", range);
+  }
+
   let response: Response;
 
   try {
-    const probe = await fetch(
-      `${gameFilesUrl}${encodeURIComponent(filename)}`,
-      {
-        headers: {
-          "range": "bytes=0-511",
-          "user-agent": "EaglerCraft-Website/1.0",
-        },
-      },
-    );
+    response = new Response(null, { status: 502 });
 
-    if (probe.status === 404) {
-      return new Response("Game file not found.", { status: 404 });
-    }
-
-    if (!probe.ok && probe.status !== 206) {
-      throw new Error(`Raw GitHub response: ${probe.status}`);
-    }
-
-    const pointer = parseGitLfsPointer(await probe.text());
-
-    if (pointer) {
-      response = await fetchGitLfsObject(pointer, request);
-    } else {
-      const headers = new Headers();
-      headers.set("user-agent", "EaglerCraft-Website/1.0");
-
-      const range = request.headers.get("range");
-      if (range) {
-        headers.set("range", range);
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      try {
+        response = await fetch(
+          `${gameFilesUrl}${encodeURIComponent(filename)}`,
+          {
+            method: request.method,
+            headers,
+          },
+        );
+        break;
+      } catch {
+        if (attempt === 1) {
+          return new Response("Game file could not be loaded.", { status: 502 });
+        }
       }
+    }
 
-      response = await fetch(
-        `${gameFilesUrl}${encodeURIComponent(filename)}`,
-        {
-          method: request.method,
-          headers,
-        },
+    if (response.ok) {
+      const contentLength = Number.parseInt(
+        response.headers.get("content-length") || "0",
+        10,
       );
+      const pointer =
+        contentLength > 0 && contentLength < 500
+          ? parseGitLfsPointer(await response.clone().text())
+          : undefined;
+
+      if (pointer) {
+        if (response.body) {
+          await response.body.cancel();
+        }
+
+        response = await fetchGitLfsObject(pointer, request);
+      }
     }
   } catch {
     return new Response("Game file could not be loaded.", { status: 502 });
